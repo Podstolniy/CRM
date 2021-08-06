@@ -1,0 +1,12 @@
+decorators
+datatypes
+
+[html]
+jinja2
+
+[tornado]
+tornado
+
+[websockets]
+websocket-client
+gevent

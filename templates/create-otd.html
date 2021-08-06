@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Отделы{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>Отделы</h1>
+    <form method="post">
+        <textarea name="otd" id="otd" class="form-control" placeholder="otd" required></textarea>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+</br>
+<div class="container">
+    {% if otds|length > 0 %}
+        {% for el in otds %}
+        <div class="alert alert-info">
+            <h3>{{ el.otd }}</h3>
+            <a href="/create-otd/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Данные об отделах пока отсутвуют</p>
+    {% endif %}
+</div>
+{% endblock %}

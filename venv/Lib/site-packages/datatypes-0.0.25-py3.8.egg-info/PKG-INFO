@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: datatypes
+Version: 0.0.25
+Summary: Utility Classes and Functions that are handy across multiple projects
+Home-page: http://github.com/Jaymon/datatypes
+Author: Jay Marcyes
+Author-email: jay@marcyes.com
+License: MIT
+Description: # Datatypes
+        
+        I've been creating the same types of classes over and over and I finally want to collect these classes into a central location that I can pull into multiple projects.
+        
+        
+        ## Installation
+        
+        Install latest stable with the following command.
+        
+            $ pip install datatypes
+            
+        Or install the latest and greatest from source:
+        
+            $ pip install -U "git+https://github.com/jaymon/datatypes#egg=datatypes"
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown

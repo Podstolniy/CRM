@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Заполнение карточки статусов{% endblock %}
+{% block body %}
+<div class="container mt-5">
+<h1>Карточка статусов</h1>
+    <form method="post">
+ <textarea name="intro" id="intro" class="form-control"  placeholder="{{ statuses_up.status }}">{{ statuses_up.status }}</textarea>
+        <input type="submit" class="btn btn-success" value="Внести данные">
+
+    </form>
+</div>
+{% endblock %}

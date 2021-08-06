@@ -1,0 +1,3 @@
+[console_scripts]
+endpoints = endpoints.__main__:console
+

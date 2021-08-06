@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Заполнение карточки заявки{% endblock %}
+{% block body %}
+<div class="container mt-5">
+<h1>Карточка заявки</h1>
+    <form method="post">
+    <textarea name="com_works" id="com_works" class="form-control"  placeholder="Что сделано по заявке"></textarea>
+        <textarea name="lf_worker" id="lf_worker" class="form-control"> {{ current_user.username }}</textarea>
+        <select name="status_work" class="form-control"  >
+            {% for st in statuses_app %}
+            <option>{{ st.status }}</option>
+            {% endfor %}
+         </select>
+        <input type="submit" class="btn btn-success" value="Внести данные">
+
+    </form>
+</div>
+{% endblock %}

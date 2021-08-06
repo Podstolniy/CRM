@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Логин{% endblock %}
+{% block body %}
+{%include "includes/_message.html"%}
+<div class="container mt-5">
+<h1>Логин</h1>
+    <form method="post">
+        <input type="text" name="name" id="name" class="form-control" placeholder="name" required><br>
+        <input type="text" name="password" id="password" class="form-control" placeholder="password" required><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+{% endblock %}
+        {% if current_user.is_authenticated %}
+    <a href="{{ url_for('auth.logout') }}" class="navbar-item">
+        Logout
+    </a>
+    {% endif %}

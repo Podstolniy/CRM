@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ detail_tips.tips }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>{{ detail_tips.tips }}</h1>
+    <div class="alert alert-info">
+        <p>{{ detail_tips.tips }}</p>
+        <a href="/create-tips/{{ detail_tips.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/create-tips/{{ detail_tips.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

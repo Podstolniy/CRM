@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ detail_statuses.status }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>{{ detail_statuses.status }}</h1>
+    <div class="alert alert-info">
+        <p>{{ detail_statuses.status }}</p>
+        <a href="/create-statuses/{{ detail_statuses.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/create-statuses/{{ detail_statuses.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

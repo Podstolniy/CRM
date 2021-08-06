@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Тип заявки{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>Тип заявки</h1>
+    <form method="post">
+        <textarea name="tips" id="tips" class="form-control" placeholder="tips" required></textarea>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+</br>
+<div class="container">
+    {% if tips|length > 0 %}
+        {% for el in tips %}
+        <div class="alert alert-info">
+            <h3>{{ el.tips }}</h3>
+            <a href="/create-tips/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Данные о типах заявок пока отсутвуют</p>
+    {% endif %}
+</div>
+{% endblock %}

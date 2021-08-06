@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ application_detail.tips_aplic }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>{{ application_detail.tips_aplic }}</h1>
+    <div class="alert alert-info">
+        <p>{{ application_detail.description }}</p>
+         <p>{{ application_detail.contacts }}</p>
+         <p>{{ application_detail.com_works }}</p>
+         <p>{{ application_detail.lf_worker }}</p>
+         <p>{{ application_detail.status_work }}</p>
+         <p><b>Дата: {{ application_detail.data_complit }}</b></p>
+        <a href="/applications/{{ application_detail.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/applications/{{ application_detail.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

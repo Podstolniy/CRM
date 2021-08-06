@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Статусы заявки{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1>Статусы заявки</h1>
+    <form method="post">
+        <textarea name="statuses" id="statuses" class="form-control" placeholder="statuses" required></textarea>
+         <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+</br>
+<div class="container">
+    {% if status|length > 0 %}
+        {% for el in status %}
+        <div class="alert alert-info">
+            <h3>{{ el.status }}</h3>
+             <a href="/create-statuses/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>Данные о статусах пока отсутвуют</p>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ detail_otd.otd }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>{{ detail_otd.otd }}</h1>
+    <div class="alert alert-info">
+        <p>{{ detail_otd.otd }}</p>
+        <a href="/create-otd/{{ detail_otd.id }}/del" class="btn btn-danger">Удалить</a>
+        <a href="/create-otd/{{ detail_otd.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+
+</div>
+{% endblock %}

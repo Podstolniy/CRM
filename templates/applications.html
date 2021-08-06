@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Все заявки в базе{% endblock %}
+
+{% block body %}
+<div class="container">
+<h1>Все заявки в базе</h1>
+
+    {% if applicates_all|length > 0 %}
+
+        {% for el in applicates_all %}
+        <div class="alert alert-info">
+            <h3>{{ el.tips_aplic }}</h3>
+            <p>{{ el.description }}</p>
+            <p>{{ el.contacts }}</p>
+            <a href="/applications/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>У нас еще нет заявок</p>
+    {% endif %}
+</div>
+
+<div class="container">
+<h1>Закрытые заявки</h1>
+ <a href="/applications_close" class="btn btn-warning">Подробнее</a>
+    </div>
+
+<div class="container">
+<h1>Открытые заявки</h1>
+ <a href="/applications_open" class="btn btn-warning">Подробнее</a>
+    </div>
+<div class="container">
+<h1>Заявки в работе</h1>
+ <a href="/applications_in_works" class="btn btn-warning">Подробнее</a>
+    </div>
+{% endblock %}

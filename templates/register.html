@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}Регистрация на сайте{% endblock %}
+{% block body %}
+{%include "includes/_message.html"%}
+<div class="container mt-5">
+<h1>Регистрация на сайте</h1>
+    <form method="post">
+        <input name="name" id="name" class="form-control" placeholder="name" required><br>
+        <input name="username" id="username" class="form-control" placeholder="username" required><br>
+        <select name="otd" class="form-control"  >
+            {% for d in regis %}
+            <option>{{ d.otd }}</option>
+            {% endfor %}
+         </select>
+        <input name="password" id="password" class="form-control" placeholder="password" required><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+</br>
+
+<div class="container">
+    <h1>Все пользователи системы</h1>
+     {% if applicates_all|length > 0 %}
+
+    {% for el in regis_all %}
+        <div class="alert alert-info">
+            <h3>{{ el.name }}</h3>
+            <h3>{{ el.otd }}</h3>
+            <a href="/register/{{ el.id }}" class="btn btn-warning">Подробнее</a>
+        </div>
+    {% endfor %}
+    {% else %}
+    <p>У нас еще нет заявок</p>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+
